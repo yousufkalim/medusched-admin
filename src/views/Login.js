@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   const handleSubmit = () => {
-    api("post", "/admins/login", user).then((res) => {
+    api("post", "/v1/admins/login", user).then((res) => {
       localStorage.setItem("token", res.token);
       window.location = "/admin/index";
     });
